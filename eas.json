@@ -1,0 +1,23 @@
+{
+  "cli": {
+    "version": ">= 16.13.2",
+    "appVersionSource": "remote"
+  },
+  "build": {
+    "development": {
+      "developmentClient": true,
+      "distribution": "internal"
+    },
+    "preview": {
+      "distribution": "internal"
+    },
+    "production": {
+      "developmentClient": false,          // ✅ REQUIRED for real APK
+      "distribution": "internal",          // or "store"
+      "autoIncrement": true
+    }
+  },
+  "submit": {
+    "production": {}
+  }
+}
